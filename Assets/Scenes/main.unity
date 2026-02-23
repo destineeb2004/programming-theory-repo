@@ -739,6 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Strawberry
   funFact: {fileID: 1887283743}
+  fruitPrefab: {fileID: 3440590460509343514, guid: 3d8e86e027ce4f64881ed948103399a5, type: 3}
 --- !u!1 &394244659
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blueberry
   funFact: {fileID: 1887283743}
+  fruitPrefab: {fileID: 3799413036777638551, guid: a3f54afefa4431d40ab0c016a9312f61, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 448034236}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2104551421}
+        m_TargetAssemblyTypeName: Smoothie, Assembly-CSharp
+        m_MethodName: Blend
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &448034236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Banana
   funFact: {fileID: 1887283743}
+  fruitPrefab: {fileID: 4214415932452397378, guid: 7176cfd5be0f5794e9043892b01177e5, type: 3}
 --- !u!1 &679894784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Plum
   funFact: {fileID: 1887283743}
+  fruitPrefab: {fileID: 7231818843433801655, guid: 1178ff673197c514586a216c5e766afb, type: 3}
 --- !u!1 &1751579719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Orange
   funFact: {fileID: 1887283743}
+  fruitPrefab: {fileID: 4699055793275803214, guid: c7d10fb1703e5164ea6d6e8d54e1cf99, type: 3}
 --- !u!1001 &1810280388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2879,9 +2896,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 248eca8db7eb063499756aa01d34a234, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2896c6a6fac26b24d8bdc555291ead2a, type: 2}
     - target: {fileID: 919132149155446097, guid: 248eca8db7eb063499756aa01d34a234, type: 3}
       propertyPath: m_Name
       value: smoothie
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 248eca8db7eb063499756aa01d34a234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 248eca8db7eb063499756aa01d34a234, type: 3}
       propertyPath: m_LocalScale.x
@@ -2901,6 +2926,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 248eca8db7eb063499756aa01d34a234, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 248eca8db7eb063499756aa01d34a234, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2928,6 +2957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73d3662794332242a3b33fcf683dce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Smoothie
+  material: {fileID: 2100000, guid: 2896c6a6fac26b24d8bdc555291ead2a, type: 2}
 --- !u!1 &2124786418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,6 +3105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Apple
   funFact: {fileID: 1887283743}
+  fruitPrefab: {fileID: 1193314325135206366, guid: 42f1adda347015e4f8cfa76877e353de, type: 3}
 --- !u!1 &2141779995
 GameObject:
   m_ObjectHideFlags: 0
