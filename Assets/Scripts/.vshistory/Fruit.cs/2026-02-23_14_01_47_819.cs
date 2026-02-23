@@ -6,6 +6,8 @@ public class Fruit : MonoBehaviour
     public TextMeshProUGUI funFact;
     protected Color color { get; private set; } // encapsulation
 
+    protected GameObject fruit;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,14 +18,13 @@ public class Fruit : MonoBehaviour
     void Update()
     {
         
-    } 
+    }
 
     protected virtual void GetFruitColor()
     {
-        gameObject.GetComponent<Renderer>().material.color = color;
-
+        fruit.gameObject.GetComponent<Renderer>().material.color = color;
     }
-    
+
     public virtual void DisplayFunFact()
     {
         funFact.text = "";

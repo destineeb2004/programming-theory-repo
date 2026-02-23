@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class MainUIHandler : MonoBehaviour
+public class Smoothie : MonoBehaviour
 {
-    
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +13,4 @@ public class MainUIHandler : MonoBehaviour
     {
         
     }
-
-    
 }

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Strawberry : Fruit
+public class Orange : Fruit
 {
     public override void DisplayFunFact() //inheritance
     {
-        funFact.text = "Fun Fact: There are about 200 seeds in every strawberry!";
+        funFact.text = "Fun Fact: The fruit came before the color!";
         funFact.gameObject.SetActive(true);
         Invoke("DisableFunFact", 10);
     }
