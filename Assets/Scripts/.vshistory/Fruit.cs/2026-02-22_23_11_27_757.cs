@@ -20,20 +20,18 @@ public class Fruit : MonoBehaviour
         
     }
 
-    protected virtual void GetFruitColor()
+    private void GetFruitColor()
     {
         fruit.gameObject.GetComponent<Renderer>().material.color = color;
     }
 
-    public virtual void DisplayFunFact()
+    private void DisplayFunFact()
     {
-        funFact.text = "";
-        funFact.gameObject.SetActive(true);
-        Invoke("DisableFunFact", 10);
+        
     }
 
     private void DisableFunFact()
     {
-        funFact.gameObject?.SetActive(false);
+
     }
 }

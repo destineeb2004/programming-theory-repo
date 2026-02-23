@@ -25,7 +25,7 @@ public class Fruit : MonoBehaviour
         fruit.gameObject.GetComponent<Renderer>().material.color = color;
     }
 
-    public virtual void DisplayFunFact()
+    protected virtual void DisplayFunFact()
     {
         funFact.text = "";
         funFact.gameObject.SetActive(true);

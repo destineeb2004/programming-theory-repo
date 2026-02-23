@@ -592,6 +592,7 @@ GameObject:
   - component: {fileID: 366255667}
   - component: {fileID: 366255666}
   - component: {fileID: 366255665}
+  - component: {fileID: 366255668}
   m_Layer: 5
   m_Name: StrawberryButton
   m_TagString: Untagged
@@ -675,6 +676,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 366255668}
+        m_TargetAssemblyTypeName: Strawberry, Assembly-CSharp
+        m_MethodName: DisplayFunFact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &366255666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +726,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366255663}
   m_CullTransparentMesh: 1
+--- !u!114 &366255668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366255663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749e6548dca667f45be39ef163b86e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Strawberry
+  funFact: {fileID: 1887283743}
 --- !u!1 &394244659
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +827,7 @@ MonoBehaviour:
         m_MethodName: SpawnFruit
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7231818843433801655, guid: 1178ff673197c514586a216c5e766afb, type: 3}
+          m_ObjectArgument: {fileID: 3799413036777638551, guid: a3f54afefa4431d40ab0c016a9312f61, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1361,35 +1387,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e38953fca8e0d4c40bf013db57a5f2ce, type: 3}
   m_PrefabInstance: {fileID: 1810280388}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1159089706
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159089704}
-  serializedVersion: 5
-  m_Mass: 50
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &1159089707
-BoxCollider:
+--- !u!64 &1159089706
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1406,9 +1405,54 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 0.1964797, z: 1}
-  m_Center: {x: 0, y: 0.57814187, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: e38953fca8e0d4c40bf013db57a5f2ce, type: 3}
+--- !u!1 &1237396888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237396890}
+  - component: {fileID: 1237396889}
+  m_Layer: 0
+  m_Name: MainUIHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1237396889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237396888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07882f87416b1084ea24a85b366c5556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainUIHandler
+--- !u!4 &1237396890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237396888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49778, y: 1.41441, z: -0.03921}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270072739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1753,7 @@ MonoBehaviour:
         m_MethodName: SpawnFruit
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3799413036777638551, guid: a3f54afefa4431d40ab0c016a9312f61, type: 3}
+          m_ObjectArgument: {fileID: 7231818843433801655, guid: 1178ff673197c514586a216c5e766afb, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1962,9 +2006,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e38953fca8e0d4c40bf013db57a5f2ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1159089706}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e38953fca8e0d4c40bf013db57a5f2ce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1159089707}
   m_SourcePrefab: {fileID: 100100000, guid: e38953fca8e0d4c40bf013db57a5f2ce, type: 3}
 --- !u!1 &1843960687
 GameObject:
@@ -2836,3 +2877,4 @@ SceneRoots:
   - {fileID: 1843960691}
   - {fileID: 1810280388}
   - {fileID: 42852961}
+  - {fileID: 1237396890}
