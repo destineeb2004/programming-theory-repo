@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
-    
+    [SerializeField] private Button button;
+    [SerializeField] private TextMeshProUGUI funFact;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,5 +19,14 @@ public class MainManager : MonoBehaviour
         
     }
 
-    
+    protected void DisplayFunFact()
+    {
+        funFact.gameObject.SetActive(true);
+        Invoke()
+    }
+
+    private void DisableFunFact()
+    {
+        funFact.
+    }
 }

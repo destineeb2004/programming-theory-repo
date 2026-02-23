@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private GameObject strawberry;
-    [SerializeField] private GameObject orange;
-    [SerializeField] private GameObject banana;
-    [SerializeField] private GameObject apple;
-    [SerializeField] private GameObject blueberry;
-    [SerializeField] private GameObject plum;
-
+    private GameObject strawberry;
+    private GameObject orange;
+    private GameObject banana;
+    private GameObject apple;
+    private GameObject blueberry;
+    private GameObject plum;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

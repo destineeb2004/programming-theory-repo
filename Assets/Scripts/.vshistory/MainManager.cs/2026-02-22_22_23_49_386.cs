@@ -18,5 +18,19 @@ public class MainManager : MonoBehaviour
         
     }
 
-    
+    private void SpawnFruit()
+    {
+
+    }
+
+    private void DisplayFunFact()
+    {
+        funFact.gameObject.SetActive(true);
+        Invoke("DisableFunFact", 10);
+    }
+
+    private void DisableFunFact()
+    {
+        funFact.gameObject?.SetActive(false);
+    }
 }
