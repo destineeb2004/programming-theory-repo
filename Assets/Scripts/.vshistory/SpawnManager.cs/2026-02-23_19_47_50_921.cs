@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private GameObject strawberry; //
+    [SerializeField] private GameObject strawberry; //encapsulation
     [SerializeField] private GameObject orange; //
     [SerializeField] private GameObject banana; //
     [SerializeField] private GameObject apple; //
     [SerializeField] private GameObject blueberry; //
-    [SerializeField] private GameObject plum; //encapsulation
+    [SerializeField] private GameObject plum; //
     public Dictionary<GameObject, int> fruitSpawned = new();
     public static SpawnManager Instance;
     void Awake()

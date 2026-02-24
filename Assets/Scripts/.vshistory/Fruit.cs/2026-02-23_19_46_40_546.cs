@@ -6,7 +6,7 @@ public class Fruit : MonoBehaviour
 {
     public TextMeshProUGUI funFact;
     public Color color { get; protected set; } // encapsulation
-    protected SpawnManager spawnManager; // encapsulation
+    protected SpawnManager spawnManager;
     [SerializeField] protected GameObject fruitPrefab;
     public static Fruit Instance;
 
