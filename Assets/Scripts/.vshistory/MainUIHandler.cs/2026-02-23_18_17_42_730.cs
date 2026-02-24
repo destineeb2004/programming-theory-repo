@@ -10,7 +10,7 @@ public class MainUIHandler : MonoBehaviour
     public Button aButton;
     public Button blButton;
     public Button pButton;
-    public GameObject mainCamera;
+    private Camera secondCamera;
     private GameObject smoothie;
     public static MainUIHandler Instance;
 
@@ -22,21 +22,18 @@ public class MainUIHandler : MonoBehaviour
     void Start()
     {
         smoothie = GameObject.Find("smoothie");
+        secondCamera = GameObject.Find("SecondaryCamera");
     }
 
     public void MakeAnotherSmoothie()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        smoothie.SetActive(false);
+        smoothie.SetActive(true);
     }
 
     public void BlendHelper()
     {
-        DisableButtons();
-        Vector3 secondView = new Vector3(3.23f, 6.8f, 0);
-        Vector3 rotate = new Vector3(60.277f, -90, 0);
-        iTween.MoveTo(mainCamera, secondView, 2);
-        iTween.RotateTo(mainCamera, rotate, 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 

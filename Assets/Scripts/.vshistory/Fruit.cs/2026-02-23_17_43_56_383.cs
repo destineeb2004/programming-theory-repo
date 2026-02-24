@@ -19,6 +19,7 @@ public class Fruit : MonoBehaviour
     {
         funFact.text = "";
         funFact.gameObject.SetActive(true);
+            
     }
 
     protected void DisableFunFact()

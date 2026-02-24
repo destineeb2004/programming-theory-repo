@@ -9,7 +9,6 @@ public class Smoothie : MonoBehaviour
     {
         gameObject.SetActive(true);
         material.color = MixSmoothie();
-        MainUIHandler.Instance.BlendHelper();
     }
 
     private Color MixSmoothie()
@@ -21,10 +20,10 @@ public class Smoothie : MonoBehaviour
         foreach (GameObject fruit in map.Keys)
         {
             Color color = Fruit.Instance.GetColor(fruit);
-            colorValues[0] += (color.r * map[fruit]);
-            colorValues[1] += (color.g * map[fruit]);
-            colorValues[2] += (color.b * map[fruit]);
-            colorValues[3] += (color.a * map[fruit]);
+            colorValues[0] += color.r;
+            colorValues[1] += color.g;
+            colorValues[2] += color.b;
+            colorValues[3] += color.a;
         }
 
         smoothieColor = new Color(colorValues[0] / map.Count, colorValues[1] / map.Count, colorValues[2] / map.Count, colorValues[3] / map.Count);

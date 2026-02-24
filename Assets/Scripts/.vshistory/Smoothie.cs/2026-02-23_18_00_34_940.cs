@@ -9,7 +9,6 @@ public class Smoothie : MonoBehaviour
     {
         gameObject.SetActive(true);
         material.color = MixSmoothie();
-        MainUIHandler.Instance.BlendHelper();
     }
 
     private Color MixSmoothie()

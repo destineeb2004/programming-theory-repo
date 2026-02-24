@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class Apple : Fruit
+public class Banana : Fruit
 {
     void Start()
     {
         color = GetColor(fruitPrefab);
     }
 
-    public override void DisplayFunFact() //polymorphism
+    public override void DisplayFunFact() //inheritance
     {
-        funFact.text = "Fun Fact: Apples are members of the rose family!";
+        funFact.text = "Fun Fact: Bananas can be black, red and blue!";
         funFact.gameObject.SetActive(true);
         //Invoke("DisableFunFact", 10);
     }

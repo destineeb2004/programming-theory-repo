@@ -32,11 +32,12 @@ public class MainUIHandler : MonoBehaviour
 
     public void BlendHelper()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         DisableButtons();
         Vector3 secondView = new Vector3(3.23f, 6.8f, 0);
         Vector3 rotate = new Vector3(60.277f, -90, 0);
-        iTween.MoveTo(mainCamera, secondView, 2);
-        iTween.RotateTo(mainCamera, rotate, 2);
+        iTween.MoveTo(mainCamera, secondView, 1);
+        iTween.RotateTo(mainCamera, rotate, 1);
 
     }
 

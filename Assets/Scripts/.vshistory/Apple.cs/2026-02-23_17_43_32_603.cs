@@ -7,7 +7,7 @@ public class Apple : Fruit
         color = GetColor(fruitPrefab);
     }
 
-    public override void DisplayFunFact() //polymorphism
+    public override void DisplayFunFact() //inheritance
     {
         funFact.text = "Fun Fact: Apples are members of the rose family!";
         funFact.gameObject.SetActive(true);

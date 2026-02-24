@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Buttons : MonoBehaviour
+public class MainUIHandler : MonoBehaviour
 {
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,5 +15,10 @@ public class Buttons : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void MakeAnotherSmoothie()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
