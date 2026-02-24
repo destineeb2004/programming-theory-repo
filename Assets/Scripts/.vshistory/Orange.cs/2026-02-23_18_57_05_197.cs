@@ -11,6 +11,6 @@ public class Orange : Fruit //inheritance
     {
         funFact.text = "Fun Fact: The color orange is named after the fruit!";
         funFact.gameObject.SetActive(true);
-        Invoke("DisableFunFact", 10);
+        //Invoke("DisableFunFact", 10);
     }
 }

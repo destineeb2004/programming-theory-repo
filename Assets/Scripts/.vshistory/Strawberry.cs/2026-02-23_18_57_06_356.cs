@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class Orange : Fruit //inheritance
+public class Strawberry : Fruit //inheritance
 {
+
     void Start()
     {
         color = GetColor(fruitPrefab);
@@ -9,8 +10,9 @@ public class Orange : Fruit //inheritance
 
     public override void DisplayFunFact() //polymorphism
     {
-        funFact.text = "Fun Fact: The color orange is named after the fruit!";
+        funFact.text = "Fun Fact: There are about 200 seeds in every strawberry!";
         funFact.gameObject.SetActive(true);
-        Invoke("DisableFunFact", 10);
+        //Invoke("DisableFunFact", 10);
     }
+
 }

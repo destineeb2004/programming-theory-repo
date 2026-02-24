@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -897171937548557297}
   m_Layer: 0
   m_Name: Blueberry
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8deaecfec13cc240974d6ca59d4ec6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
+  funFact: {fileID: 0}
+  fruitPrefab: {fileID: 0}
 --- !u!54 &-9228584074265807
 Rigidbody:
   m_ObjectHideFlags: 0

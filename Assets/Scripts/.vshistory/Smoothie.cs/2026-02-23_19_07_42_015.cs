@@ -27,11 +27,9 @@ public class Smoothie : MonoBehaviour
             colorValues[1] += (color.g * map[fruit]);
             colorValues[2] += (color.b * map[fruit]);
             colorValues[3] += (color.a * map[fruit]);
-
-            totalFruit += map[fruit];
         }
 
-        smoothieColor = new Color(colorValues[0] / totalFruit, colorValues[1] / totalFruit, colorValues[2] / totalFruit, colorValues[3] / totalFruit);
+        smoothieColor = new Color(colorValues[0] / map.Count, colorValues[1] / map.Count, colorValues[2] / map.Count, colorValues[3] / map.Count);
 
         return smoothieColor;
     }

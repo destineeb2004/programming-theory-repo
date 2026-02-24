@@ -27,6 +27,7 @@ public class MainUIHandler : MonoBehaviour
     public void MakeAnotherSmoothie()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        smoothie.SetActive(false);
     }
 
     public void BlendHelper()
@@ -36,11 +37,11 @@ public class MainUIHandler : MonoBehaviour
         Vector3 rotate = new Vector3(60.277f, -90, 0);
         iTween.MoveTo(mainCamera, secondView, 2);
         iTween.RotateTo(mainCamera, rotate, 2);
-        DeleteFruit();
+
 
     }
 
-    private void DisableButtons() // abstraction
+    public void DisableButtons()
     {
         sButton.enabled = false;
         oButton.enabled = false;
@@ -50,7 +51,7 @@ public class MainUIHandler : MonoBehaviour
         pButton.enabled = false;
     }
 
-    private void EnableButtons()
+    public void EnableButtons()
     {
         sButton.enabled = true;
         oButton.enabled = true;
@@ -58,18 +59,5 @@ public class MainUIHandler : MonoBehaviour
         aButton.enabled = true;
         blButton.enabled = true;
         pButton.enabled = true;
-    }
-
-    private void DeleteFruit() //abstraction
-    {
-        Object[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
-        foreach(GameObject obj in allObjects)
-        {
-            if (obj.CompareTag("Fruit"))
-            {
-                Destroy(obj);
-            }
-            
-        }
     }
 }

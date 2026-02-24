@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Orange : Fruit //inheritance
+public class Plum : Fruit //inheritance
 {
     void Start()
     {
@@ -9,8 +9,8 @@ public class Orange : Fruit //inheritance
 
     public override void DisplayFunFact() //polymorphism
     {
-        funFact.text = "Fun Fact: The color orange is named after the fruit!";
+        funFact.text = "Fun Fact: Prunes are just dried plums!";
         funFact.gameObject.SetActive(true);
-        Invoke("DisableFunFact", 10);
+        //Invoke("DisableFunFact", 10);
     }
 }

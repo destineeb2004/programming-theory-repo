@@ -27,6 +27,7 @@ public class MainUIHandler : MonoBehaviour
     public void MakeAnotherSmoothie()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        smoothie.SetActive(false);
     }
 
     public void BlendHelper()
@@ -40,7 +41,7 @@ public class MainUIHandler : MonoBehaviour
 
     }
 
-    private void DisableButtons() // abstraction
+    private void DisableButtons()
     {
         sButton.enabled = false;
         oButton.enabled = false;
@@ -60,7 +61,7 @@ public class MainUIHandler : MonoBehaviour
         pButton.enabled = true;
     }
 
-    private void DeleteFruit() //abstraction
+    private void DeleteFruit()
     {
         Object[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach(GameObject obj in allObjects)
