@@ -14,7 +14,7 @@ public class Blueberry : Fruit //inheritance
 
         if (funFact.text != "")
         {
-            CancelInvoke();
+            CancelInvoke("DisableFunFact");
             Invoke("DisableFunFact", 10);
         }
         else

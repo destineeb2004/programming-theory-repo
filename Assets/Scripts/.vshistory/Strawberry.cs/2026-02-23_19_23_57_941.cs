@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class Blueberry : Fruit //inheritance
+public class Strawberry : Fruit //inheritance
 {
+
     void Start()
     {
         color = GetColor(fruitPrefab);
@@ -9,12 +10,12 @@ public class Blueberry : Fruit //inheritance
 
     public override void DisplayFunFact() //polymorphism
     {
-        funFact.text = "Fun Fact: Blueberries are one of the only foods that are naturally blue in color!";
+        funFact.text = "Fun Fact: There are about 200 seeds in every strawberry!";
         funFact.gameObject.SetActive(true);
 
-        if (funFact.text != "")
+        if(funFact.text != "")
         {
-            CancelInvoke();
+            CancelInvoke("DisableFunFact");
             Invoke("DisableFunFact", 10);
         }
         else
@@ -22,4 +23,5 @@ public class Blueberry : Fruit //inheritance
             Invoke("DisableFunFact", 10);
         }
     }
+
 }

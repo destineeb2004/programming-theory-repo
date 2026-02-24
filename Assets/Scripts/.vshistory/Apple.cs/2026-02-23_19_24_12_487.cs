@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Blueberry : Fruit //inheritance
+public class Apple : Fruit //inheritance
 {
     void Start()
     {
@@ -9,12 +9,12 @@ public class Blueberry : Fruit //inheritance
 
     public override void DisplayFunFact() //polymorphism
     {
-        funFact.text = "Fun Fact: Blueberries are one of the only foods that are naturally blue in color!";
+        funFact.text = "Fun Fact: Apples are members of the rose family!";
         funFact.gameObject.SetActive(true);
 
         if (funFact.text != "")
         {
-            CancelInvoke();
+            CancelInvoke("DisableFunFact");
             Invoke("DisableFunFact", 10);
         }
         else
